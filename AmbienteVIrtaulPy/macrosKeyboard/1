@@ -1,0 +1,86 @@
+# Bibliotecas Importadas 
+
+import webbrowser  as web
+import pyautogui as bot
+import time
+from tkinter import *
+from tkinter import ttk
+
+
+
+###     Variaveis Gerais 
+
+
+comandos = ["1 Abrir navegador",
+            "2 pytuaogui",
+            "3 Sair"
+            "4 ",
+            "5 Abrir sistemaViverBemSeguros "] 
+
+mensagemDeErro = ("Atenção Usuario Deu Erro  ")
+contagem = [1,2,3,4,5 ] 
+print(comandos)
+
+
+resposta =int(input(f"Atenção digite o Numero Pra execultar escript    :   "))
+#respostas = respostas
+
+
+def tkinter():
+     janela = Tk()
+     frm = ttk.Frame(janela, padding=180)
+     frm.grid()
+     ttk.title ("Programa De Automação de Scripts ")
+     ttk.Label (frm,  text="Programa De Automação de Scripts ").grid(column=0, row=1)
+     ttk.Button(frm, text="Sair Do Programa", command=janela.destroy).grid(column=5, row=0)
+     ttk.Button(frm, text="Abrir pyautogui", command=janela.destroy).grid(column=2, row=2)
+     ttk.Button(frm, text="Abrir navegador google ", command=janela.destroy).grid(column=3, row=4)
+     ttk.Button(frm, text="Abrir pyautogui", command=janela.destroy).grid(column=3, row=5)
+ 
+     janela.mainloop()
+     
+tkinter()
+
+
+               )# Fazendo  o loppe while True:
+
+while True:
+    if resposta == 1:
+        web.open("http://stackoverflow.com")
+    
+    elif resposta == 2:
+        for i in range(5):
+            print('Ver alerta')
+            bot.alert("DENNER TESTE")
+  
+
+    elif resposta == 3:
+        print("Vou sair ")
+        
+
+    elif resposta == 4:
+        print("Vou Abrir sistemaViverBemSeguros")
+        web.open_new('https://www.sistemaviverbemseguros.com/')
+    elif resposta ==100 :
+        tkinter()
+
+
+
+
+    else:
+        print(mensagemDeErro)
+        print("Atenção Sera Encerrado O programa")
+
+        time.sleep(5)
+        print("Atenção Sera Encerrado O programa")
+        for i in range(5):
+            print(contagem)
+    break
+    # Finalizando o Lopper
+
+
+
+## Tkinter Interface grafica Do Python
+
+
+
